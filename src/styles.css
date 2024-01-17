@@ -5,7 +5,7 @@ body {
 
 .container {
   margin: 120px auto;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 header {
@@ -15,7 +15,7 @@ header {
 h1 {
   text-align: left;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 35px;
   line-height: 1.5;
   color: #0e092e;
   margin: 0 auto;
@@ -29,7 +29,7 @@ form {
 
 .instructions {
   padding-left: 10px;
-  width: 70%;
+  width: 60%;
   font-size: 16px;
   border-radius: 50px;
   line-height: 20px;
@@ -45,13 +45,54 @@ form {
   padding: 19px 29px;
 }
 
-img {
-  vertical-align: middle;
+.avatar_1 {
+  display: inline-block;
   width: 80px;
   height: 80px;
+  line-height: 80px;
+  text-align: center;
   border-radius: 50%;
   margin-bottom: 60px;
+  background-color: #8ab9c3;
+  font-size: 10px;
 }
+
+.avatar_2 {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 60px;
+  font-size: 10px;
+  background-color: #f3d903;
+}
+
+.avatar_3 {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 60px;
+  font-size: 10px;
+  background-color: #89b5fe;
+}
+
+.avatar_4 {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 60px;
+  font-size: 10px;
+  background-color: #e37a91;
+}
+
 .poem {
   font-size: 16px;
   color: #0e092e;
