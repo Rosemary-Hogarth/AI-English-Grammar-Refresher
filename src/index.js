@@ -32,7 +32,7 @@ formElement.addEventListener("submit", flashAvatar);
 
 function flashAvatar() {
   avatar.forEach((element) => {
-    element.style.backgroundColor = "#ed9206";
+    element.style.backgroundColor = "#a8e1e1";
   });
 
   setTimeout(() => {
