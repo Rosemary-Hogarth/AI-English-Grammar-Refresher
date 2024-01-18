@@ -28,18 +28,19 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <h1>AI ENGLISH GRAMMAR REFRESHER</h1>
-      <div class="avatars">
-        <span class="avatar_1">Present Simple</span>
-        <span class="avatar_2">Past Simple</span>
-        <span class="avatar_3">Conditional</span>
-        <span class="avatar_4">Passive</span>
-      </div>
+
+      <span class="avatar_1">Present Simple</span>
+      <span class="avatar_2">Past Simple</span>
+      <span class="avatar_3">Conditional</span>
+      <span class="avatar_4">Passive</span>
+
       <main>
         <form id="grammar_term">
           <input
@@ -49,6 +50,7 @@
             required
             autocomplete="off"
             class="instructions"
+            id="user_instructions"
           />
           <input type="submit" class="submit-button" />
         </form>
