@@ -41,3 +41,29 @@ function flashAvatar() {
     });
   }, 3000);
 }
+
+let image = document.getElementById("avatar_1");
+let image2 = document.getElementById("avatar_2");
+let image3 = document.getElementById("avatar_3");
+let image4 = document.getElementById("avatar_4");
+let textInput = document.getElementById("user_instructions");
+
+image.addEventListener("click", () => {
+  let textToShow = "present simple";
+  textInput.value = textToShow;
+});
+
+image2.addEventListener("click", () => {
+  let textToShow = "past simple";
+  textInput.value = textToShow;
+});
+
+image3.addEventListener("click", () => {
+  let textToShow = "conditional";
+  textInput.value = textToShow;
+});
+
+image4.addEventListener("click", () => {
+  let textToShow = "passive";
+  textInput.value = textToShow;
+});
