@@ -2,7 +2,7 @@ function displayGrammar(response) {
   new Typewriter("#grammar_info", {
     strings: response.data.answer,
     autoStart: true,
-    delay: 1,
+    delay: 10,
     cursor: "",
   });
 }
@@ -13,11 +13,31 @@ function generateGrammarInfo(event) {
   let userInstructions = document.querySelector("#user_instructions");
   let apiKey = "b75146af46et20c8d83f2ao3006e4a7d";
   let context = `You are an English as a foreign language teaching assistant. Help the user to understand the grammar term that is being requested.`;
-  let prompt = `Use beginner level English to: write an example sentence about ${userInstructions.value}, for example: I went shopping yesterday. Explain the grammar, for example: 'went' is the past simple of 'go'. Highlight any key words, for example: yesterday is a key word that we use with past simple. Categorise the information like this: <strong>Example<strong/>:, Explanation:, Key words:. Please make verbs <strong><strong/>. `;
+  let prompt = `Use beginner level English to write an example sentence about ${userInstructions.value}, for example: I went shopping yesterday. In the next sentence, explain the grammar, for example: 'went' is the past simple of 'go'. In the next sentence, highlight any key words connected to the grammar, for example: yesterday is a key word that we use with past simple. Do NOT hightlight nouns such as 'Anna' or 'breakfast'. Categorise the information like this: <strong>Example<strong/>:, <strong>Explanation<strong/>:, <strong>Key words<strong/>:.. `;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let grammarInfo = document.querySelector("#grammar_info");
+  grammarInfo.innerHTML = `Generating information about ${userInstructions.value}...`;
   axios.get(apiUrl).then(displayGrammar);
+  flashAvatar();
 }
 
 let formElement = document.querySelector("#grammar_term");
 formElement.addEventListener("submit", generateGrammarInfo);
+
+let avatar = document.querySelectorAll(
+  "#avatar_1, #avatar_2, #avatar_3, #avatar_4"
+);
+formElement.addEventListener("submit", flashAvatar);
+
+function flashAvatar() {
+  avatar.forEach((element) => {
+    element.style.backgroundColor = "#ed9206";
+  });
+
+  setTimeout(() => {
+    avatar.forEach((element) => {
+      element.style.backgroundColor = "";
+    });
+  }, 2900);
+}
