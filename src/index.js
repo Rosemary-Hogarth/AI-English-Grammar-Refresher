@@ -13,7 +13,7 @@ function generateGrammarInfo(event) {
   let userInstructions = document.querySelector("#user_instructions");
   let apiKey = "b75146af46et20c8d83f2ao3006e4a7d";
   let context = `You are an English as a foreign language teaching assistant. Help the user to understand the grammar term that is being requested.`;
-  let prompt = `Use beginner level English to write an example sentence about ${userInstructions.value}, for example: I went shopping yesterday. In the next sentence, explain the grammar, for example: 'went' is the past simple of 'go'. In the next sentence, highlight key words connected to the grammar, for example: 'yesterday' is a key word that we use with past simple. Do NOT hightlight nouns, for example: 'Anna' or 'breakfast'. In all examples, categorise the information like this: <strong>Example<strong/>:, <strong>Explanation<strong/>:, <strong>Key words<strong/>:. If ${userInstructions.value} is NOT a tense, write a short description of the grammar and do not include key words.`;
+  let prompt = `Use beginner level English to write a short, clear example sentence about ${userInstructions.value}. In the next sentence, concisely explain the grammar. In all examples, categorise the information like this: <strong>Example<strong/>:, <strong>Explanation<strong/>:. If ${userInstructions.value} is a tense, highlight key words, for example: 'yesterday' is a key word that we use with past simple.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let grammarInfo = document.querySelector("#grammar_info");
