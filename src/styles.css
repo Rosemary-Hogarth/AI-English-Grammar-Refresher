@@ -44,7 +44,7 @@ li {
 form {
   border-radius: 10px;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
 }
 
 .instructions {
@@ -63,6 +63,16 @@ form {
   border: none;
   border-radius: 50px;
   padding: 19px 29px;
+}
+
+#user_instructions {
+  padding-right: 15px;
+  width: calc(100% - 20px);
+}
+
+.hint {
+  font-size: 11px;
+  margin-left: 15px;
 }
 
 .avatar_1,
@@ -106,6 +116,7 @@ form {
 }
 
 .hidden {
+  color: #757575;
   display: none;
 }
 .grammar {
@@ -122,7 +133,11 @@ footer {
 }
 
 a {
-  color: #0177ff;
+  color: #3c65ab;
+}
+a:hover {
+  color: #89b5fe;
+  text-decoration: none;
 }
 
 @media (max-width: 765px) {
@@ -172,6 +187,11 @@ a {
   }
   .submit-button {
     padding: 8px 13px;
+  }
+
+  .hint {
+    font-size: 10px;
+    margin-left: 10px;
   }
 
   footer {
